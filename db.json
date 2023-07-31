@@ -1,0 +1,24 @@
+{
+    "superhero":[
+        {
+            "id":1,
+            "name":"Bagman",
+            "alterEgo":"My Dad"
+        },
+        {
+            "id":2,
+            "name":"The Flaming Carrot",
+            "alterEgo":"Ut"
+        },
+        {
+            "id":3,
+            "name":"Spinal Man",
+            "alterEgo":"Eleven"
+        },
+        {
+            "id":4,
+            "name":"Wonder Woman",
+            "alterEgo":"Not Gal Gadot"
+        }
+    ]
+}
