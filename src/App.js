@@ -1,5 +1,6 @@
+import {QueryClientProvider,QueryClient} from 'react-query';
 import {createBrowserRouter,RouterProvider} from 'react-router-dom';
-import {} from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
 import HomePage from './Components/HomePage';
 import RQPage from './Components/RQPage';
 import Root from './Components/Root';
@@ -13,10 +14,15 @@ const browserRouter = createBrowserRouter([
 },
 ])
 
+const queryClient = new QueryClient();
+
 function App() {
   return (
+    <QueryClientProvider client={queryClient} contextSharing={true}>
       <RouterProvider router={browserRouter}>
       </RouterProvider>
+      <ReactQueryDevtools initialIsOpen={true} />
+    </QueryClientProvider>
   );
 }
 
