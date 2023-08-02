@@ -1,13 +1,16 @@
 import {createBrowserRouter,RouterProvider} from 'react-router-dom';
+import {} from 'react-query';
 import HomePage from './Components/HomePage';
 import RQPage from './Components/RQPage';
-import Test from './Components/Test';
+import Root from './Components/Root';
 import './App.css';
 
 const browserRouter = createBrowserRouter([
-{path:'/', element:<HomePage></HomePage>},
-{path:'/rq-super-heroes',element:<RQPage></RQPage>},
-{path:'/test', element:<Test></Test>}
+{path:'/', element:<Root></Root>,children:[
+  {path:'/', element:<HomePage></HomePage>},
+  {path:'/rq-super-heroes',element:<RQPage></RQPage>}
+]
+},
 ])
 
 function App() {
