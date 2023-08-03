@@ -1,7 +1,6 @@
 import {QueryClientProvider,QueryClient} from 'react-query';
 import {createBrowserRouter,RouterProvider} from 'react-router-dom';
 import { ReactQueryDevtools } from 'react-query/devtools';
-import { QueryClientProvider,QueryClient } from 'react-query';
 import HomePage from './Components/HomePage';
 import RQPage from './Components/RQPage';
 import Root from './Components/Root';
