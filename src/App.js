@@ -1,4 +1,5 @@
 import {createBrowserRouter,RouterProvider} from 'react-router-dom';
+import { QueryClientProvider,QueryClient } from 'react-query';
 import HomePage from './Components/HomePage';
 import RQPage from './Components/RQPage';
 import Test from './Components/Test';
@@ -12,8 +13,10 @@ const browserRouter = createBrowserRouter([
 
 function App() {
   return (
+    <QueryClientProvider>
       <RouterProvider router={browserRouter}>
       </RouterProvider>
+    </QueryClientProvider>
   );
 }
 
