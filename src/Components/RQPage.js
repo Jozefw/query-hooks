@@ -2,10 +2,12 @@ import React from 'react';
 import {useQuery} from 'react-query';
 import axios from 'axios';
 
+const getSuperHeroReq = () =>{
+  return axios.get('http://localhost:4000/superhero')
+}
+
 function RQPage(){
-  const {isLoading,data} = useQuery('super-heroes',()=>{
-    return axios.get('http://localhost:4000/superheroes')
-  })
+  const {isLoading,data} = useQuery('super-heroes', getSuperHeroReq)
   if(isLoading){
     return(
       <h1>Loading...</h1>
