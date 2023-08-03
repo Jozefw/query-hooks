@@ -7,10 +7,15 @@ const getSuperHeroReq = () =>{
 }
 
 function RQPage(){
-  const {isLoading,data} = useQuery('super-heroes', getSuperHeroReq)
+  const {isLoading,data,isError,error} = useQuery('superhero', getSuperHeroReq,{cacheTime:5000})
   if(isLoading){
     return(
       <h1>Loading...</h1>
+    )
+  }
+  if(isError){
+    return(
+      <h1>Error occured...{error.message}</h1>
     )
   }
   return (
