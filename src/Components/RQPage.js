@@ -7,7 +7,12 @@ const getSuperHeroReq = () =>{
 }
 
 function RQPage(){
-  const {isLoading,data,isError,error} = useQuery('superhero', getSuperHeroReq,{cacheTime:5000})
+  const {isLoading,data,isError,error} = useQuery('superhero', 
+  getSuperHeroReq,
+  {
+    refetchOnnMount:true,
+    refetchOnWindowFocus:'always'
+  })
   if(isLoading){
     return(
       <h1>Loading...</h1>
